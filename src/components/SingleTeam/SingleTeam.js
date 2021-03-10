@@ -4,17 +4,17 @@ import { Card, Button, Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons'
 
-const Team = () => {
+const SingleTeam = (props) => {
+    const {strSport, strLeague} = props.tm;
     return (
         <Col md={4} className="p-3">
             <Card className="p-5">
                 <Card.Img variant="top" src={league} />
                 <Card.Body className="text-center">
-                    <Card.Title>Card Title</Card.Title>
+                    <Card.Title>{strLeague}</Card.Title>
                     <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
-                                </Card.Text>
+                        Sports Type: {strSport}
+                    </Card.Text>
                     <Button variant="success">Explore <FontAwesomeIcon icon={faLongArrowAltRight} /></Button>
                 </Card.Body>
             </Card>
@@ -22,4 +22,4 @@ const Team = () => {
     );
 };
 
-export default Team;
+export default SingleTeam;
