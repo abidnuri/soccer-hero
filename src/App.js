@@ -1,13 +1,14 @@
 import './App.css';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home'
+import NoMatch from './components/NoMatch/NoMatch';
+import Footer from './components/Footer/Footer';
+import TeamDetails from './components/TeamDetails/TeamDetails';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
-import NoMatch from './components/NoMatch/NoMatch';
-import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -15,10 +16,13 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/">
-        <Home />
+          <Home />
         </Route>
         <Route path="/home">
           <Home />
+        </Route>
+        <Route path="/team/details">
+          <TeamDetails />
         </Route>
         <Route path="*">
           <NoMatch />

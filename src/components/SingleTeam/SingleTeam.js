@@ -1,21 +1,25 @@
 import React from 'react';
-import league from '../../league.png'
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons'
+import {
+    BrowserRouter as Router,
+    Link
+  } from "react-router-dom";
 
 const SingleTeam = (props) => {
-    const {strSport, strLeague} = props.tm;
+    const { strTeam, strSport, strTeamBadge} = props.tm;
     return (
         <Col md={4} className="p-3">
             <Card className="p-5">
-                <Card.Img variant="top" src={league} />
+                <Card.Img variant="top" src={strTeamBadge} />
                 <Card.Body className="text-center">
-                    <Card.Title>{strLeague}</Card.Title>
+                    <Card.Title className="font-weight-bold">{strTeam}</Card.Title>
                     <Card.Text>
-                        Sports Type: {strSport}
+                        <span>Sports Type:</span>
+                        <span className="text-success ml-2">{strSport}</span> 
                     </Card.Text>
-                    <Button variant="success">Explore <FontAwesomeIcon icon={faLongArrowAltRight} /></Button>
+                    <Button as={Link} to={`/team/details`} variant="dark">Explore <FontAwesomeIcon icon={faLongArrowAltRight} /></Button>
                 </Card.Body>
             </Card>
         </Col>
