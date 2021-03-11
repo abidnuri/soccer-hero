@@ -13,6 +13,7 @@ import {
     faFutbol,
     faMars,
 } from '@fortawesome/free-solid-svg-icons'
+import css from './TeamDetails.css'
 import {
     BrowserRouter as Router,
     useParams,
