@@ -68,7 +68,9 @@ const TeamDetails = () => {
                         <p><FontAwesomeIcon icon={faMars} /> Gender: {strGender}</p>
                     </Col>
                     <Col md={6}>
-                        <img className="img-fluid p-3" src={strTeamFanart1} alt="" />
+                        {strGender === "Male"
+                            ? <img className="img-fluid p-3" src={strTeamFanart1} alt="" />
+                            : <img className="img-fluid p-3" src={strTeamFanart2} alt="" />}
                     </Col>
                 </Row>
                 <Row className="mt-3">
