@@ -59,29 +59,35 @@ const TeamDetails = () => {
                 <img className="img-fluid" src={strTeamBadge} alt="" />
             </Jumbotron>
             <div>
-            <Row className="bg-dark rounded p-2">
-                <Col md={6} className="align-self-center text-white">
-                    <h1 className="font-weight-bold py-3">{strTeam}</h1>
-                    <p><FontAwesomeIcon icon={faMapMarkerAlt} /> Founded: {intFormedYear}</p>
-                    <p><FontAwesomeIcon icon={faFlag} /> Country: {strCountry}</p>
-                    <p><FontAwesomeIcon icon={faFutbol} /> Sport Type: {strSport}</p>
-                    <p><FontAwesomeIcon icon={faMars} /> Gender: {strGender}</p>
-                </Col>
-                <Col md={6}>
-                    <img className="img-fluid p-3" src={strTeamFanart1} alt="" />
-                </Col>
-            </Row>
-            <Row className="mt-3">
-                <Col md={12}>
-                    <p>{strDescriptionEN}</p>
-                    <p>{strAlternate}</p>
-                </Col>
-                <Col md={12} className="text-center mb-5">
-                    <a href={'https://' + strTwitter} target="_blank"><span className="p-2 h1"><FontAwesomeIcon icon={faTwitter} /></span></a>
-                    <a href={'https://' + strFacebook} target="_blank"><span className="p-2 h1"><FontAwesomeIcon icon={faFacebook} /></span></a>
-                    <a href={'https://' + strYoutube} target="_blank"><span className="p-2 h1 text-danger"><FontAwesomeIcon icon={faYoutube} /></span></a>
-                </Col>
-            </Row>
+                <Row className="bg-dark rounded p-2">
+                    <Col md={6} className="align-self-center text-white">
+                        <h1 className="font-weight-bold py-3">{strTeam}</h1>
+                        <p><FontAwesomeIcon icon={faMapMarkerAlt} /> Founded: {intFormedYear}</p>
+                        <p><FontAwesomeIcon icon={faFlag} /> Country: {strCountry}</p>
+                        <p><FontAwesomeIcon icon={faFutbol} /> Sport Type: {strSport}</p>
+                        <p><FontAwesomeIcon icon={faMars} /> Gender: {strGender}</p>
+                    </Col>
+                    <Col md={6}>
+                        <img className="img-fluid p-3" src={strTeamFanart1} alt="" />
+                    </Col>
+                </Row>
+                <Row className="mt-3">
+                    <Col md={12}>
+                        <p>{strDescriptionEN}</p>
+                        <p>{strAlternate}</p>
+                    </Col>
+                    <Col md={12} className="text-center mb-5">
+                        <a href={'https://' + strTwitter} target="_blank">
+                            <span className="p-2 h1"><FontAwesomeIcon icon={faTwitter} /></span>
+                        </a>
+                        <a href={'https://' + strFacebook} target="_blank">
+                            <span className="p-2 h1"><FontAwesomeIcon icon={faFacebook} /></span>
+                        </a>
+                        <a href={'https://' + strYoutube} target="_blank">
+                            <span className="p-2 h1 text-danger"><FontAwesomeIcon icon={faYoutube} /></span>
+                        </a>
+                    </Col>
+                </Row>
             </div>
         </Container>
     );

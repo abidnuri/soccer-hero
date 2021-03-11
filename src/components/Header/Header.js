@@ -9,11 +9,11 @@ const Header = () => {
     return (
         <>
             <Navbar bg="dark" expand="lg" className="sticky-top">
-                <Navbar.Brand as={Link} to="/"  className="text-warning">Soccer Hero</Navbar.Brand>
+                <Navbar.Brand as={Link} to="/" className="text-warning">Soccer Hero</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link  as={Link} to="/" className="text-white">Home</Nav.Link>
+                        <Nav.Link as={Link} to="/" className="text-white">Home</Nav.Link>
                     </Nav>
                     <Form inline>
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" />

@@ -5,10 +5,10 @@ import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons'
 import {
     BrowserRouter as Router,
     Link
-  } from "react-router-dom";
+} from "react-router-dom";
 
 const SingleTeam = (props) => {
-    const {idTeam, strTeam, strSport, strTeamBadge} = props.tm;
+    const { idTeam, strTeam, strSport, strTeamBadge } = props.tm;
     console.log(props.tm);
     return (
         <Col md={4} className="p-3">
@@ -18,7 +18,7 @@ const SingleTeam = (props) => {
                     <Card.Title className="font-weight-bold">{strTeam}</Card.Title>
                     <Card.Text>
                         <span>Sports Type:</span>
-                        <span className="text-success ml-2">{strSport}</span> 
+                        <span className="text-success ml-2">{strSport}</span>
                     </Card.Text>
                     <Button as={Link} to={`team/${idTeam}`} variant="dark">Explore <FontAwesomeIcon icon={faLongArrowAltRight} /></Button>
                 </Card.Body>
