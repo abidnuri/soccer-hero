@@ -13,8 +13,6 @@ import {
     faFutbol,
     faMars,
 } from '@fortawesome/free-solid-svg-icons'
-import images from '../../images/male.png'
-import css from './TeamDetails.css'
 import {
     BrowserRouter as Router,
     useParams,
@@ -23,7 +21,6 @@ import {
 
 const TeamDetails = () => {
     const { teamID } = useParams();
-    // console.log(allParams);
     const [teamDetails, setTeamDetails] = useState({});
     useEffect(() => {
         fetch(`https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${teamID}`)
@@ -49,7 +46,6 @@ const TeamDetails = () => {
     return (
         <Container>
             <Jumbotron fluid className="jumborton-bg" style={{
-                // backgroundImage: `url('')`,
                 backgroundSize: '100% 300px',
                 textAlign: 'center',
                 backgroundRepeat: 'no-repeat',

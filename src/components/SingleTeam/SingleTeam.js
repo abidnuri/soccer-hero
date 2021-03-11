@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Button, Container, Row, Col } from 'react-bootstrap';
+import { Card, Button, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons'
 import {
@@ -9,7 +9,6 @@ import {
 
 const SingleTeam = (props) => {
     const { idTeam, strTeam, strSport, strTeamBadge } = props.tm;
-    console.log(props.tm);
     return (
         <Col md={4} className="p-3">
             <Card className="p-5">
