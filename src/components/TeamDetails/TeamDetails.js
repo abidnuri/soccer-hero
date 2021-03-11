@@ -13,11 +13,10 @@ import {
     faFutbol,
     faMars,
 } from '@fortawesome/free-solid-svg-icons'
-import css from './TeamDetails.css'
+import './TeamDetails.css'
 import {
     BrowserRouter as Router,
     useParams,
-    Link
 } from "react-router-dom";
 
 const TeamDetails = () => {
@@ -27,7 +26,7 @@ const TeamDetails = () => {
         fetch(`https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${teamID}`)
             .then(res => res.json())
             .then(data => setTeamDetails(data.teams[0]));
-    }, []);
+    }, [teamID]);
     const {
         strTeam,
         strTeamBadge,
@@ -76,13 +75,13 @@ const TeamDetails = () => {
                         <p>{strAlternate}</p>
                     </Col>
                     <Col md={12} className="text-center mb-5">
-                        <a href={'https://' + strTwitter} target="_blank">
+                        <a href={'https://' + strTwitter} target="blank">
                             <span className="p-2 h1"><FontAwesomeIcon icon={faTwitter} /></span>
                         </a>
-                        <a href={'https://' + strFacebook} target="_blank">
+                        <a href={'https://' + strFacebook} target="blank">
                             <span className="p-2 h1"><FontAwesomeIcon icon={faFacebook} /></span>
                         </a>
-                        <a href={'https://' + strYoutube} target="_blank">
+                        <a href={'https://' + strYoutube} target="blank">
                             <span className="p-2 h1 text-danger"><FontAwesomeIcon icon={faYoutube} /></span>
                         </a>
                     </Col>
