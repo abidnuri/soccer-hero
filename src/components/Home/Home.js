@@ -9,7 +9,6 @@ const Home = () => {
             .then(res => res.json())
             .then(data => setTeam(data.teams));
     }, []);
-    console.log(team);
     return (
         <>
             <Container>

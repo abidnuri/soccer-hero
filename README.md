@@ -1,6 +1,6 @@
 # Getting Started To Build Team
 
-This project was created by Abid Nuri [Live Site Link](https://github.com/facebook/create-react-app).
+This project was created by Abid Nuri [Live Site Link](https://quizzical-mayer-3e11c9.netlify.app/).
 
 ## Available Feature
 1. See The Team
