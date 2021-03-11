@@ -18,6 +18,10 @@ import {
     BrowserRouter as Router,
     useParams,
 } from "react-router-dom";
+import Male from '../../male.png'
+import feMale from '../../female.png'
+
+
 
 const TeamDetails = () => {
     const { teamID } = useParams();
@@ -65,8 +69,8 @@ const TeamDetails = () => {
                     </Col>
                     <Col md={6}>
                         {strGender === "Male"
-                            ? <img className="img-fluid p-3" src={strTeamFanart1} alt="" />
-                            : <img className="img-fluid p-3" src={strTeamFanart2} alt="" />}
+                            ? <img className="img-fluid p-3" src={Male} alt="" />
+                            : <img className="img-fluid p-3" src={feMale} alt="" />}
                     </Col>
                 </Row>
                 <Row className="mt-3">
