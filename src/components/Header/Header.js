@@ -1,20 +1,26 @@
 import React from 'react';
-import HeaderCss from './Header.css';
-import { Button, Navbar, Nav, Form, FormControl, Container, Jumbotron } from 'react-bootstrap';
+import { Button, Navbar, Nav, Form, FormControl, Container } from 'react-bootstrap';
+import {
+    BrowserRouter as Router,
+    Link
+} from "react-router-dom";
 
 const Header = () => {
     return (
         <>
-            {/* <Container>
-                <Jumbotron fluid className="jumborton-bg" style={{
-                    backgroundSize: '100% 300px',
-                    textAlign: 'center',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundImage: `linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.9) 100%), url("https://www.the-afc.com/img/image/upload/t_l2/joumf8y3pzk2sx4owem2.jpg")`
-                }}>
-                    <h2 className="text-center text-dark font-weight-bold">Soccer Hero League</h2>
-                </Jumbotron>
-            </Container> */}
+            <Navbar bg="dark" expand="lg" className="sticky-top">
+                <Navbar.Brand as={Link} to="/"  className="text-warning">Soccer Hero</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto">
+                        <Nav.Link  as={Link} to="/" className="text-white">Home</Nav.Link>
+                    </Nav>
+                    <Form inline>
+                        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                        <Button variant="outline-success">Search</Button>
+                    </Form>
+                </Navbar.Collapse>
+            </Navbar>
         </>
     );
 };

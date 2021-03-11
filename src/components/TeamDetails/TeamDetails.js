@@ -38,7 +38,7 @@ const TeamDetails = () => {
         intFormedYear,
         strSport,
         strDescriptionEN,
-        strDescriptionFR,
+        strAlternate,
         strStadiumThumb,
         strYoutube,
         strFacebook,
@@ -53,12 +53,13 @@ const TeamDetails = () => {
                 backgroundSize: '100% 300px',
                 textAlign: 'center',
                 backgroundRepeat: 'no-repeat',
+                marginBottom: '0px',
                 backgroundImage: `linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.9) 100%), url(${strStadiumThumb})`
             }}>
-                {/* <h2 className="text-center text-dark font-weight-bold">{strTeam}</h2> */}
                 <img className="img-fluid" src={strTeamBadge} alt="" />
             </Jumbotron>
-            <Row className="bg-dark rounded">
+            <div>
+            <Row className="bg-dark rounded p-2">
                 <Col md={6} className="align-self-center text-white">
                     <h1 className="font-weight-bold py-3">{strTeam}</h1>
                     <p><FontAwesomeIcon icon={faMapMarkerAlt} /> Founded: {intFormedYear}</p>
@@ -67,20 +68,21 @@ const TeamDetails = () => {
                     <p><FontAwesomeIcon icon={faMars} /> Gender: {strGender}</p>
                 </Col>
                 <Col md={6}>
-                    <img className="img-fluid p-3" src={strTeamFanart1} alt=""/>
+                    <img className="img-fluid p-3" src={strTeamFanart1} alt="" />
                 </Col>
             </Row>
             <Row className="mt-3">
                 <Col md={12}>
                     <p>{strDescriptionEN}</p>
-                    <p>{strDescriptionFR}</p>
+                    <p>{strAlternate}</p>
                 </Col>
                 <Col md={12} className="text-center mb-5">
                     <a href={'https://' + strTwitter} target="_blank"><span className="p-2 h1"><FontAwesomeIcon icon={faTwitter} /></span></a>
                     <a href={'https://' + strFacebook} target="_blank"><span className="p-2 h1"><FontAwesomeIcon icon={faFacebook} /></span></a>
-                    <a href={'https://' + strYoutube} target="_blank"><span className="p-2 h1"><FontAwesomeIcon icon={faYoutube} /></span></a>
+                    <a href={'https://' + strYoutube} target="_blank"><span className="p-2 h1 text-danger"><FontAwesomeIcon icon={faYoutube} /></span></a>
                 </Col>
             </Row>
+            </div>
         </Container>
     );
 };
