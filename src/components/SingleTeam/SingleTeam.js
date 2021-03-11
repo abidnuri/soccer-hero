@@ -3,7 +3,6 @@ import { Card, Button, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons'
 import {
-    BrowserRouter as Router,
     Link
 } from "react-router-dom";
 
