@@ -13,7 +13,6 @@ import {
 function App() {
   return (
     <Router>
-      <Header />
       <Switch>
         <Route exact path="/">
           <Home />
@@ -21,7 +20,7 @@ function App() {
         <Route path="/home">
           <Home />
         </Route>
-        <Route path="/team/details">
+        <Route path="/team/:teamID">
           <TeamDetails />
         </Route>
         <Route path="*">
